@@ -13,7 +13,8 @@
   "attributes": {
     "Name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": false
     },
     "Icon": {
       "type": "media",
@@ -29,6 +30,11 @@
       "relation": "manyToMany",
       "target": "api::doctor.doctor",
       "mappedBy": "categories"
+    },
+    "Slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }
