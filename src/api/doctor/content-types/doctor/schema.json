@@ -57,6 +57,12 @@
     "Year_of_Experience": {
       "type": "string",
       "required": true
+    },
+    "appointments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appointment.appointment",
+      "mappedBy": "doctor"
     }
   }
 }
