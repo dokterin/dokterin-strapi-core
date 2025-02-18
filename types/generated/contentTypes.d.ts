@@ -381,10 +381,10 @@ export interface ApiAppointmentAppointment extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Appointment_Date: Schema.Attribute.DateTime & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Date: Schema.Attribute.String & Schema.Attribute.Required;
     doctor: Schema.Attribute.Relation<'manyToOne', 'api::doctor.doctor'>;
     Email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -395,7 +395,6 @@ export interface ApiAppointmentAppointment extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Notes: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
-    Time: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

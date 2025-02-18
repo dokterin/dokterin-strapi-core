@@ -24,16 +24,12 @@
       "target": "api::doctor.doctor",
       "inversedBy": "appointments"
     },
-    "Date": {
-      "type": "string",
-      "required": true
-    },
-    "Time": {
-      "type": "string",
-      "required": true
-    },
     "Notes": {
       "type": "richtext"
+    },
+    "Appointment_Date": {
+      "type": "datetime",
+      "required": true
     }
   }
 }
